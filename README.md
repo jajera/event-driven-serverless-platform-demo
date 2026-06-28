@@ -30,8 +30,6 @@ Processor image: [`ghcr.io/platformfuzz/tec-processor-image`](https://github.com
 
 Station IDs are 4-character alphanumeric (`[A-Za-z0-9]{4}`), case-insensitive at the API and lowercase in S3 keys.
 
-Details: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · [docs/DATA_CONTRACT.md](docs/DATA_CONTRACT.md)
-
 ## Repository layout
 
 ```text
