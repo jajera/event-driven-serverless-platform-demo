@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "firmware: build",
+      "type": "shell",
+      "command": "pio run -d firmware -e esp32-s3-n16r8",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "firmware: upload",
+      "type": "shell",
+      "command": "pio run -d firmware -e esp32-s3-n16r8 -t upload",
+      "group": "none",
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "firmware: monitor",
+      "type": "shell",
+      "command": "pio device monitor -d firmware -b 115200",
+      "group": "none",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "firmware: native tests",
+      "type": "shell",
+      "command": "pio test -d firmware -e native",
+      "group": "test",
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
